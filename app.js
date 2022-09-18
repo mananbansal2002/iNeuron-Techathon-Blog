@@ -51,6 +51,6 @@ app.use(BlogRoutes);
 app.use(commentRoutes);
 
 
-app.listen(3000, function() {
+app.listen('/', function() {
     console.log("Yelpcamp 3000 initiated...");
 })
