@@ -51,6 +51,13 @@ app.use(BlogRoutes);
 app.use(commentRoutes);
 
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+
+
+  app.get('/', function (req, res) {
+    res.send('Hello World!');
   });
+  
+  // use port 3000 unless there exists a preconfigured port
+  var port = process.env.PORT || 3000;
+  
+  app.listen(port);
